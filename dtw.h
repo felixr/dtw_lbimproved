@@ -15,14 +15,16 @@
 #define DTW
 
 #include <iostream>
-#include<vector>
-#include<algorithm>
-#include<cmath>
+#include <vector>
+#include <algorithm>
+#include <cmath>
 #include <deque>
 #include <sstream>
+#include <assert.h>
 
 typedef double floattype;
 typedef unsigned int uint;
+
 using namespace std;
 
 class MathUtil {

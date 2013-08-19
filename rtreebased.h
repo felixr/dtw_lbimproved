@@ -13,6 +13,7 @@
 #include <SpatialIndex.h>
 #include <fstream>
 #include <iostream>
+#include <memory>
 
 
 class TimeSeriesDB {
