@@ -1,6 +1,7 @@
 # LBImproved C++ Library
 
-**Author:** Daniel Lemire
+**Author:** Daniel Lemire 
+
 **License:** GPL v3
 
 This library comes in the form of one short C++ header file. The documentation
@@ -17,6 +18,7 @@ The library assumes that your time series have the same length. If they don't, y
 
 **Reference:**
 - Daniel Lemire, Faster Retrieval with a Two-Pass Dynamic-Time-Warping Lower Bound, Pattern Recognition Volume 42, Issue 9, September 2009, Pages 2169-2180. http://arxiv.org/abs/0811.3301
+- Original source: http://code.google.com/p/lbimproved/
 
 ## Key features
 
@@ -27,14 +29,12 @@ The library assumes that your time series have the same length. If they don't, y
 
 ## PREREQUISITES
 
-1) You must first build and install the spatial index library 
-(http://research.att.com/~marioh/spatialindex/index.html)
-I built this software with release 1.3.2 - May 23rd, 2008.
-
-2) While not strictly necessary, SWIG (http://www.swig.org) is strongly recommended.
-I interact with the library using swig and python.
-
-3) If you are using SWIG, Python is recommended. I have used Python 2.5.
+- You must first build and install the spatial index library 
+  (http://research.att.com/~marioh/spatialindex/index.html)
+  I built this software with release 1.3.2 - May 23rd, 2008.
+- While not strictly necessary, SWIG (http://www.swig.org) is strongly recommended.
+  I interact with the library using swig and python.
+- If you are using SWIG, Python is recommended. I have used Python 2.5.
 
 ## OPERATING SYSTEM
 
@@ -71,7 +71,7 @@ rtree.close()
 rtree = dtw.TimeSeriesTree("mytmpfile.bin")
 ```
 
-``c
+```c
 #include "dtw.h"
 (...)
 // compute the DTW between two vectors:
