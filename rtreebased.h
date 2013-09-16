@@ -15,6 +15,8 @@
 #include <iostream>
 #include <memory>
 
+#include <sys/stat.h>
+
 
 class TimeSeriesDB {
 	public:

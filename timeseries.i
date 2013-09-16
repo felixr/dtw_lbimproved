@@ -10,6 +10,8 @@
 %include "std_string.i"
 %include "cstring.i"
 %include "std_vector.i"
-namespace std {   %template(vectord) vector<double>;};
+namespace std {
+    %template(vectord) vector<double>;
+};
 %include "dtw.h"
-%include "rtreebased.h"
+/* %include "rtreebased.h" */
