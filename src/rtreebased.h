@@ -48,11 +48,8 @@ public:
     TimeSeriesTree( string  filename, const uint constraint, const uint dim, const int parent_capacity = 100, const int leave_capacity = 100);
 
     void close();
-    bool lock();
-    void unlock();
     std::vector<double> & readTimeSeries(uint myid);
 
-    bool good();
     void add(const std::vector<double> &  newdata);
 
     /**
@@ -71,6 +68,10 @@ public:
      */
     uint getSize();
 
+protected:
+    bool lock();
+    void unlock();
+    bool good();
 private:
 
     TimeSeriesTree( const  TimeSeriesTree & o) ;
