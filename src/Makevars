@@ -1,0 +1,16 @@
+# vim : ft=make :
+
+PKG_LIBS+=/usr/lib/libspatialindex.a
+
+LIBSPATIALINDEX_INCLUDES=$(shell pkg-config --cflags-only-I libspatialindex)
+PKG_CXXFLAGS+=$(LIBSPATIALINDEX_INCLUDES) -std=c++0x #-I$(R_HOME)/include
+
+all: $(SHLIB) 
+
+$(SHLIB): timeseries_wrap.o
+	cp lbimproved.R ../R/
+
+timeseries_wrap.cpp: timeseries.i
+	swig -Wall -c++ -r -o timeseries_wrap.cpp timeseries.i
+
+
